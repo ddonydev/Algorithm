@@ -1,4 +1,4 @@
-public class Beginners8 {
+public class Beginners08 {
 
     class Solution {
         public int solution(int angle) {

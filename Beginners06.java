@@ -1,4 +1,4 @@
-public class Beginners6 {
+public class Beginners06 {
 
     class Solution {
         public int solution(int num1, int num2) {
