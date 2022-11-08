@@ -6,9 +6,9 @@ public class Beginners15 {
             int x = 0;
 
             if(n%2 == 0){
-                answer = new int[n/2];
+                answer = new int[n/2];  // n이 짝수일때
             } else {
-                answer = new int[n/2+1];
+                answer = new int[n/2+1];    // n이 홀수일때
             }
 
             for(int i = 0; i <= n; i++){
