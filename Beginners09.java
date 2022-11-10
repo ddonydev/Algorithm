@@ -1,4 +1,5 @@
-class Solution {
+public class Beginners09 {
+
     public int solution(int n) {
         int answer = 0;
 
@@ -11,4 +12,5 @@ class Solution {
 
         return answer;
     }
+
 }
