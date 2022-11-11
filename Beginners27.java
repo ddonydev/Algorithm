@@ -8,7 +8,7 @@ public class Beginners27 {
 
             for(int i = 0; i < numbers.length; i++){            // numbers의 길이 까지 돌면서
                 if(x < numbers[i]){                             // 만약 numbers[i]번째 보다 x가 작으면
-                    y = x;
+                    y = x;                                      //
                     x = numbers[i];                             // x에 numbers[i]를 넣어준다
                 }else if(y < numbers[i] && x != numbers[i])     // 만약 numbers[i]번째가 y보다 작고, numbers[i]는 x가 아니면
                     y = numbers[i];                             // y에 numbers[i]를 넣어준다
