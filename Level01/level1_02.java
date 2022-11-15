@@ -1,6 +1,6 @@
 package Level01;
 
-public class level01_02 {
+public class level1_02 {
 
     class Solution {
         public String solution(int num) {

@@ -1,6 +1,6 @@
 package Level01;
 
-public class level01_01 {
+public class level1_01 {
 
     class Solution {
         public double solution(int[] arr) {
