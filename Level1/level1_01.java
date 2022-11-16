@@ -1,4 +1,4 @@
-package Level01;
+package Level1;
 
 public class level1_01 {
 
