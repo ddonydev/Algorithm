@@ -12,7 +12,6 @@ public class level0_36 {
             }else{
                 answer = 2;
             }
-
             return answer;
         }
     }

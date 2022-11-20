@@ -13,9 +13,6 @@ public class level0_35 {
                     }
                 }
             }
-
-
-
             return answer;
 
         }

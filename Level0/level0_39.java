@@ -10,7 +10,6 @@ public class level0_39 {
                 answer += n % 10;
                 n /= 10;
             }
-
             return answer;
         }
     }

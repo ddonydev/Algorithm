@@ -11,7 +11,6 @@ public class level0_37 {
                     answer++;
                 }
             }
-
             return answer;
         }
     }
