@@ -3,10 +3,10 @@ class Solution {
         int answer = 0;
         
         for(int i : numbers){
-            if(answer <= n){
-                answer += i;
-            }else{
+            if(answer > n){
                 return answer;
+            }else{
+                answer += i;
             }
         }
         
