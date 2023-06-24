@@ -12,20 +12,13 @@ class Solution {
             ar2 += i;
         }
         
-        if(arr1.length > arr2.length){
+        if(arr1.length > arr2.length || (arr1.length == arr2.length && ar1 > ar2)){
             answer = 1;
+        }else if(arr1.length < arr2.length || arr1.length == arr2.length && ar1 < ar2){
+            answer = -1;
         }else{
-            answer = -1;
-        }
-        
-        if(arr1.length == arr2.length && ar1 == ar2){
             answer = 0;
-        }else if(arr1.length == arr2.length && ar1 > ar2){
-            answer = 1;
-        }else if(arr1.length == arr2.length && ar1 < ar2){
-            answer = -1;
-        }
-        
+        }      
           
         return answer;
     }
