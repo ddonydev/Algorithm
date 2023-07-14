@@ -3,24 +3,23 @@ import java.util.Arrays;
 import java.util.List;
 class Solution {
     public int[] solution(int n) {
-        int x = 0;
         List<Integer> list = new ArrayList<>(Arrays.asList(n));
 
         if(n % 2 == 0){
-            x = n / 2;
-            list.add(x);
+            n = n / 2;
+            list.add(n);
         }else{
-            x = 3 * n + 1;
-            list.add(x);
+            n = 3 * n + 1;
+            list.add(n);
         }
 
-        while (x != 1){
-            if(x % 2 == 0){
-                x /= 2;
-                list.add(x);
+        while (n != 1){
+            if(n % 2 == 0){
+                n /= 2;
+                list.add(n);
             }else{
-                x = 3 * x + 1;
-                list.add(x);
+                n = 3 * n + 1;
+                list.add(n);
             }
 
         }
