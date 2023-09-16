@@ -21,10 +21,7 @@ class Solution {
             cnt++;
 
         }
-        
-        int answer = cnt - 1;
 
-        
-        return answer;
+        return cnt - 1;
     }
 }
