@@ -1,18 +1,16 @@
+import java.util.*;
 class Solution {
     public int[] solution(String s) {
-        String[] str = s.split("");
-        String tmp = "";
-
+        Map<String, Integer> map = new LinkedHashMap<>();
         int[] answer = new int[s.length()];
 
-        for (int i = 0; i < str.length; i++) {
-            answer[i] = tmp.lastIndexOf(str[i]);
-
-            if (tmp.contains(str[i])) {
-                answer[i] = i - tmp.lastIndexOf(str[i]);
+        for (int i = 0; i < s.length(); i++) {
+            if (map.containsKey(String.valueOf(s.charAt(i)))) {
+                answer[i] = i - map.get(String.valueOf(s.charAt(i)));
+            }else{
+                answer[i] = -1;
             }
-            tmp += str[i];
-
+            map.put(String.valueOf(s.charAt(i)), i);
         }
         return answer;
     }
