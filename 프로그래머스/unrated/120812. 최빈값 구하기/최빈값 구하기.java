@@ -4,6 +4,7 @@ class Solution {
         if(array.length == 1){
             return array[0];
         }
+        
         Map<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < array.length; i++) {
             if (map.containsKey(array[i])) {
