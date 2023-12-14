@@ -9,25 +9,19 @@ class Solution {
         }
         for (int i = 0; i < cities.length; i++) {
             String s = cities[i].toLowerCase();
-            if (cache.size() < cacheSize) {
-                if (!cache.contains(s)) {
+            if (!cache.contains(s)) {
+                if (cache.size() < cacheSize) {
                     cache.add(s);
                     answer += 5;
                 }else{
-                    cache.remove(s);
-                    cache.add(s);
-                    answer += 1;
-                }
-            }else{
-                if (!cache.contains(s)) {
                     cache.remove(0);
                     cache.add(s);
                     answer += 5;
-                }else{
-                    cache.remove(s);
-                    cache.add(s);
-                    answer += 1;
                 }
+            }else{
+                cache.remove(s);
+                cache.add(s);
+                answer += 1;
             }
         }
         return answer;
