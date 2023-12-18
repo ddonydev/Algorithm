@@ -1,7 +1,8 @@
 import java.util.*;
 class Solution {
     public int[] solution(int N, int[] stages) {
-        Map<Integer, Double> map = new HashMap<>();
+        int[] answer = new int[N];
+        Stage[] stage = new Stage[N];
         for (int i = 1; i < N + 1; i++) {
             int total = 0;
             int cnt = 0;
@@ -13,22 +14,34 @@ class Solution {
                     cnt++;
                 }
             }
-            if (total == 0){
-                map.put(i, (double) 0);
+            if (total == 0) {
+                stage[i - 1] = new Stage(i, 0);
             }else{
-                map.put(i, (double) cnt / total);
+                stage[i - 1] = new Stage(i, (double) cnt / total);
             }
+            
         }
+        
+        Arrays.sort(stage);
 
-        List<Integer> keySet = new ArrayList<>(map.keySet());
-        Collections.sort(keySet, (o1, o2) ->(map.get(o2).compareTo(map.get(o1))));
-
-        int[] answer = new int[N];
-        int index = 0;
-        for (int key : keySet){
-            answer[index] = key;
-            index++;
+        for (int i = 0; i < stage.length; i++) {
+            answer[i] = stage[i].current;
         }
         return answer;
+    }
+}
+
+class Stage implements Comparable<Stage>{
+    int current;
+    double fail;
+
+    public Stage (int current, double fail) {
+        this.current = current;
+        this.fail = fail;
+    }
+
+    @Override
+    public int compareTo(Stage o) {
+        return Double.compare(o.fail, this.fail);
     }
 }
