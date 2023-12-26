@@ -1,12 +1,12 @@
 import java.util.*;
 class Solution {
     public int solution(String dartResult) {
-        int answer = 0;
-        int s = 1;
-        int d = 2;
-        int t = 3;
-
         String[] dartStr = dartResult.split("");
+        
+        Map<String, Integer> map = new HashMap<>();
+        map.put("S", 1);
+        map.put("D", 2);
+        map.put("T", 3);
 
         Stack<Integer> stack = new Stack<>();
         for(int i = 0; i < dartStr.length; i++){
@@ -19,14 +19,11 @@ class Solution {
                     stack.add(Integer.parseInt(dartStr[i]));
                 }
             }else {
+                String ch = dartStr[i];
                 int num = stack.pop();
-                if(dartStr[i].equals("S")){
-                    num = (int) Math.pow(num, s);
-                }else if(dartStr[i].equals("D")){
-                    num = (int) Math.pow(num, d);
-                }else if(dartStr[i].equals("T")){
-                    num = (int) Math.pow(num, t);
-                } else if (dartStr[i].equals("*")) {
+                if(ch.equals("S") || ch.equals("D") || ch.equals("T")){
+                    num = (int) Math.pow(num, map.get(ch));
+                }else if (dartStr[i].equals("*")) {
                     num *= 2;
                     if (stack.size() >= 1) {
                         int n = stack.pop();
@@ -40,6 +37,7 @@ class Solution {
             }
         }
 
+        int answer = 0;
         while (!stack.isEmpty()) {
             answer += stack.pop();
         }
