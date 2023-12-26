@@ -5,11 +5,9 @@ class Solution {
         
         List<String> list = new ArrayList<>();
         for(int i = 0; i <= t * m; i++){
-            String s = Integer.toString(i, n);
-            s = s.toUpperCase();
-            String[] str = s.split("");
-            for(int j = 0; j < str.length; j++){
-                list.add(str[j]);
+            String[] s = Integer.toString(i, n).toUpperCase().split("");
+            for(int j = 0; j < s.length; j++){
+                list.add(s[j]);
             }
         }
 
