@@ -4,7 +4,6 @@ class Solution {
          HashSet<Integer> set = new HashSet<>();
         Map<Integer, Integer> map = new HashMap<>();
 
-//        set.add(topping[0]);
         for (int i = 0; i < topping.length; i++) {
             map.put(topping[i], map.getOrDefault(topping[i], 0) + 1);
         }
