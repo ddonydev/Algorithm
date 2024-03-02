@@ -13,7 +13,6 @@ class Solution {
         }
 
         int max = Collections.max(list);
-        System.out.println(max);
 
         Set<Integer> set = new HashSet<>();
 
