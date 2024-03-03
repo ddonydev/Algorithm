@@ -1,7 +1,10 @@
 import java.util.*; 
 class Solution {
         public double solution(int[] numbers) {
-            return Arrays.stream(numbers).average().getAsDouble();
+            double sum = Arrays.stream(numbers).sum();
+
+            return sum / numbers.length;
+            
         }
     }
 
