@@ -2,8 +2,8 @@ class Solution {
     public int solution(int[] array, int height) {
         int answer = 0;
         
-        for(int i = 0; i < array.length; i++){
-            if(height < array[i]){
+        for(int arr : array){
+            if(arr > height){
                 answer++;
             }
         }
