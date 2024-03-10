@@ -1,16 +1,15 @@
 class Solution {
     public int solution(String my_string) {
         
-        String extract = my_string.replaceAll("[^0-9]", "");
-        String[] str = extract.split("");
-
-        int num = 0;
-
-        for(int i = 0; i < str.length; i++){
-            num += Integer.parseInt(str[i]);
-        }
+        my_string = my_string.replaceAll("[^0-9]","");
         
-        return num;
+        String[] str = my_string.split("");
+
+        int answer = 0;
+        for (String s : str) {
+            answer += Integer.parseInt(s);
+        }
+        return answer;
         
     }
 }
