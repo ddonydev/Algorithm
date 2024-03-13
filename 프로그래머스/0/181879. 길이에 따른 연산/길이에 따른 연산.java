@@ -1,18 +1,14 @@
+import java.util.*;
 class Solution {
     public int solution(int[] num_list) {
         
-        int sum = 0;
-        int multiple = 1;
+        int len = num_list.length;
         
-        for(int i = 0; i < num_list.length; i++){
-                sum += num_list[i];
-                multiple *= num_list[i]; 
-        }
-        
-        if(num_list.length >= 11){
-            return sum;
+        int answer = 0;
+        if(len <= 10){
+            return Arrays.stream(num_list).reduce((a, b) -> a * b).getAsInt();
         }else{
-             return multiple;
+            return (int) Arrays.stream(num_list).mapToLong(i -> i).sum();
         }
         
         
