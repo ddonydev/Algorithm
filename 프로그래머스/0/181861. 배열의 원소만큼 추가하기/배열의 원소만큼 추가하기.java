@@ -1,15 +1,17 @@
-import java.util.ArrayList;
+import java.util.*;
 class Solution {
     public int[] solution(int[] arr) { 
         
-         ArrayList<Integer> answer = new ArrayList<>();
-
-        for(int i = 0; i < arr.length; i++){
-            for (int j = 0; j < arr[i]; j++) {
-                answer.add(arr[i]);
+        int sum = Arrays.stream(arr).sum();
+        int[] answer = new int[sum];
+        
+        int index = 0;
+        for(int i : arr){
+            for(int j = 0; j < i; j++){
+                answer[index++] = i;
             }
         }
         
-        return answer.stream().mapToInt(Integer::intValue).toArray();
+        return answer;
     }
 }
