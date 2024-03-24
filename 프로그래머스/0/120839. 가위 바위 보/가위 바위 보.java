@@ -1,19 +1,17 @@
+import java.util.*;
 class Solution {
     public String solution(String rsp) {
         
-        String[] split = rsp.split("");
-
+        HashMap<String, String> map = new HashMap<>();
+        map.put("2", "0");
+        map.put("0", "5");
+        map.put("5", "2");
+        
         String answer = "";
-
-        for(int i = 0; i < split.length; i++) {
-            if (split[i].equals("2")) {
-                answer += "0";
-            } else if (split[i].equals("0")) {
-                answer += "5";
-            }else if(split[i].equals("5")){
-                answer +=  "2";
-            }
+        for(int i = 0; i < rsp.length(); i++){
+            answer += map.get(String.valueOf(rsp.charAt(i)));
         }
+        
         
         return answer;
     }
