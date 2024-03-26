@@ -1,15 +1,13 @@
 class Solution {
     public int solution(int n, String control) {
-        String[] str = control.split("");
-        
-        for(int i = 0; i < str.length; i++){
-            if(str[i].equals("w")){
+       for(int i = 0; i < control.length(); i++){
+            if(control.charAt(i) == 'w'){
                 n += 1;
-            }else if(str[i].equals("s")){
+            }else if(control.charAt(i) == 's'){
                 n -= 1;
-            }else if(str[i].equals("d")){
+            }else if(control.charAt(i) == 'd'){
                 n += 10;
-            }else if(str[i].equals("a")){
+            }else if(control.charAt(i) == 'a'){
                 n -= 10;
             }
         }
