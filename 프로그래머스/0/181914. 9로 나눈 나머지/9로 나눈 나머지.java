@@ -2,9 +2,8 @@ class Solution {
     public int solution(String number) {
         int tmp = 0;
         
-        String[] str = number.split("");
-        for(int i = 0; i < str.length; i++){
-            tmp += Integer.parseInt(str[i]);
+        for(int i = 0; i < number.length(); i++){
+            tmp += number.charAt(i) - '0';
         }
         
         return tmp % 9; 
