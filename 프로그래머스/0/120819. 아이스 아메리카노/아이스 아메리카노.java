@@ -3,8 +3,6 @@ class Solution {
         
         int price = 5500;
         
-        int[] answer = {money / price, money % price};
-        
-        return answer;
+        return new int[]{money / price, money % price};
     }
 }
