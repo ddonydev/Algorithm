@@ -1,13 +1,17 @@
+import java.util.*;
 class Solution {
     public String solution(int age) {
+        String str = String.valueOf(age);
+
+        HashMap<Integer, Character> map = new HashMap<>();
+        int num = 0;
+        for(int i = 97; i < 123; i++){
+            map.put(num++, (char) i);
+        }
+
         String answer = "";
-        String x = String.valueOf(age);
-        String[] tmp = x.split("");
-
-        String[] str = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"};
-
-        for (int i = 0; i < tmp.length; i++) {
-            answer += str[Integer.parseInt(tmp[i])];
+        for (int i = 0; i < str.length(); i++) {
+            answer += map.get(Integer.parseInt(String.valueOf(str.charAt(i))));
         }
         return answer;
     }
