@@ -1,13 +1,17 @@
-import java.util.*;
 class Solution {
     public int[] solution(int n) {
-       ArrayList<Integer> list = new ArrayList<>();
-
-        for (int i = 1; i <= n; i += 2) {
-            list.add(i);
+        int len = n / 2;
+        if(n % 2 != 0){
+            len += 1;
+        }
+       int[] answer = new int[len];
+        
+        int index = 0;
+        for(int i = 1; i <= n; i += 2){
+            answer[index++] = i;
         }
         
     
-        return list.stream().mapToInt(Integer::intValue).toArray();
+        return answer;
     }
 }
