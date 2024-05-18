@@ -4,14 +4,15 @@ class Solution {
         int num1 = Integer.parseInt(str[0]);
         int num2 = Integer.parseInt(str[2]);
         
-
-        if(str[1].contains("+")){
-            return num1 + num2;
-        }else if(str[1].contains("-")){
-            return num1 - num2;
-        }else{
-            return num1 * num2;
+        switch(str[1]){
+            case"+":
+                return num1 + num2;
+            case"-":
+                return num1 - num2;
+            case"*":
+                return num1 * num2;
         }
+        return 0;
         
     }
 }
