@@ -1,10 +1,9 @@
 public class Solution {
     public int solution(int n) {
         int answer = 0;
-
-        String tmp = Integer.toString(n);
-        for(int i = 0; i < tmp.length(); i++){
-            answer += tmp.charAt(i) - '0';
+        while(n > 0){
+            answer += n % 10;
+            n /= 10;
         }
 
         return answer;
