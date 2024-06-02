@@ -5,19 +5,16 @@ class Solution {
                         "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", 
                         "..-", "...-", ".--", "-..-", "-.--", "--.."};
 
-        String[] abc = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", 
-                        "k", "l", "m", "n", "o", "p", "q", "r", "s", 
-                        "t", "u", "v", "w", "x", "y", "z"};
-
         HashMap<String, String> morse = new HashMap<>();
-
-        String[] tmp = letter.split(" ");
-        for (int i = 0; i < abc.length; i++) {
-            morse.put(str[i], abc[i]);
+        char n = 97;
+        
+        for (int i = 0; i < str.length; i++) {
+            morse.put(str[i], String.valueOf(n));
+            n++;
         }
 
         String answer = "";
-
+        String[] tmp = letter.split(" ");
         for (int i = 0; i < tmp.length; i++) {
             answer += morse.get(tmp[i]);
         }
