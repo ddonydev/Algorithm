@@ -1,7 +1,8 @@
 class Solution {
     public String solution(String s) {
-        String[] str = s.split("");
-        return str.length % 2 != 0 
-            ? str[str.length / 2] : str[(str.length / 2) - 1] + str[str.length / 2];
+        return s.length() % 2 != 0 
+            ? String.valueOf(s.charAt(s.length() / 2)) 
+            : String.valueOf(s.charAt((s.length() / 2 )- 1)) 
+                + String.valueOf(s.charAt(s.length() / 2));
     }
 }
