@@ -3,12 +3,11 @@ class Solution {
         int answer = 0;
         
         for(int i : array){
-            String s = String.valueOf(i);
-            
-            for(int j = 0; j < s.length(); j++){
-                if(s.charAt(j) == '7'){
+            while (i > 0){
+                if(i % 10 == 7){
                     answer++;
                 }
+                i /= 10;
             }
         }
         
