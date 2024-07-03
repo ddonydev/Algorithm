@@ -1,11 +1,8 @@
 import java.util.*; 
 class Solution {
-        public double solution(int[] numbers) {
-            double sum = Arrays.stream(numbers).sum();
-
-            return sum / numbers.length;
-            
-        }
+    public double solution(int[] numbers) {
+        return (double) Arrays.stream(numbers).sum() / numbers.length;
     }
+}
 
 
