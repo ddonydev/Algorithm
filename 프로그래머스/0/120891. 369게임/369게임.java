@@ -2,11 +2,12 @@ class Solution {
     public int solution(int order) {
         int answer = 0;
         
-        String tmp = Integer.toString(order);
-        for(int i = 0; i < tmp.length(); i++){
-            if(tmp.charAt(i) == '3' || tmp.charAt(i) == '6' || tmp.charAt(i) == '9'){
+        while(order > 0){
+            int n = order % 10;
+            if(n == 3 || n == 6 || n == 9){
                 answer++;
             }
+            order /= 10;
         }
         
         return answer;
