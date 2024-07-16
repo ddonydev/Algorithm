@@ -1,17 +1,17 @@
 class Solution {
     public int solution(String myString, String pat) {
-        String tmp = "";
-        
-        String[] arr = myString.split("");
-        for(int i = 0; i < arr.length; i++){
-            if(arr[i].equals("A")){
-                arr[i] = arr[i].replace("A", "B");
+        for(int i = 0; i < myString.length(); i++){
+            if(myString.charAt(i) == 'A'){
+                myString = myString.substring(0, i) + "B" + myString.substring(i + 1);
             }else{
-                arr[i] = arr[i].replace("B", "A");
+                myString = myString.substring(0, i) + "A" + myString.substring(i + 1);
             }
-            tmp += arr[i];
         }
         
-        return tmp.contains(pat) ? 1 : 0;
+        if(myString.contains(pat)){
+            return 1;
+        }else{
+            return 0;
+        }
     }
 }
