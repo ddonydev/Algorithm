@@ -1,29 +1,27 @@
 import java.util.*;
 class Solution {
     public int[] solution(int[] arr) {
-        ArrayList<Integer> index = new ArrayList<>();
-        ArrayList<Integer> list = new ArrayList<>();
-        
-        for (int i = 0; i < arr.length; i++) {
+        int start = 0;
+        for(int i = 0; i < arr.length; i++){
             if(arr[i] == 2){
-                index.add(i);
+                start = i;
+                break;
             }
         }
         
-        if(index.size() != 0){
-            for (int i = index.get(0); i <= index.get(index.size() - 1); i++) {
-                list.add(arr[i]);
+        int end = 0;
+        for(int i = arr.length - 1; i >= 0; i--){
+            if(arr[i] == 2){
+                end = i;
+                break;
             }
-        }else{
+        }
+        
+        if(start == 0 && end == 0){
             return new int[]{-1};
         }
         
-        int[] answer = new int[list.size()];
-
-        for (int i = 0; i < list.size(); i++) {
-            answer[i] = list.get(i);
-        }
-        
+        int[] answer = Arrays.copyOfRange(arr, start, end + 1);
         return answer;
     }
 }
