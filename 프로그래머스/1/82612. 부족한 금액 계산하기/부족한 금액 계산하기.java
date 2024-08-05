@@ -5,10 +5,6 @@ class Solution {
             current += (price * i);
         }
 
-        if(current <= money) {
-            return 0;
-        }else{
-            return Math.abs(current - money);
-        }
+        return current <= money ? 0 : Math.abs(current - money);
     }
 }
