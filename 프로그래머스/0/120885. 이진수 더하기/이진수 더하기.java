@@ -3,8 +3,6 @@ class Solution {
         int s1 = Integer.parseInt(bin1, 2);
         int s2 = Integer.parseInt(bin2, 2);
 
-        int result = s1 + s2;
-
-        return Integer.toBinaryString(result);
+        return Integer.toBinaryString(s1 + s2);
     }
 }
