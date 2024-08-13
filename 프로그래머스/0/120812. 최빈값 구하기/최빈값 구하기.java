@@ -5,14 +5,9 @@ class Solution {
             return array[0];
         }
         
-        Map<Integer, Integer> map = new HashMap<>();
+        HashMap<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < array.length; i++) {
-            if (map.containsKey(array[i])) {
-                int v = map.get(array[i]);
-                map.put(array[i], ++v);
-            }else{
-                map.put(array[i], 1);
-            }
+            map.put(array[i], map.getOrDefault(array[i], 0) + 1);
         }
 
         int max = 1;
