@@ -6,8 +6,7 @@ class Solution {
         while(true){
             pizza++;
             if((6 * pizza) % n == 0){
-                answer = pizza;
-                return answer;   
+                return pizza;   
             }
 
         }
