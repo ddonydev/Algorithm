@@ -4,9 +4,7 @@ class Solution {
         int answer = 0;
 
         for (int i = 0; i < str.length; i++) {
-            if(str[i].isEmpty()){
-                continue;
-            }else{
+            if(!str[i].isEmpty()){
                 answer += Integer.parseInt(str[i]);
             }
         }
