@@ -7,10 +7,10 @@ class Solution {
         long answer = 0;
         if(x == n){
             sqrt = sqrt + 1;
-            answer = sqrt * sqrt;
+            return sqrt * sqrt;
         }else{
             return -1;
         }
-        return answer;
+        
     }
 }
