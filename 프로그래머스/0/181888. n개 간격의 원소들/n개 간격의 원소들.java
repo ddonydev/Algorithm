@@ -1,10 +1,7 @@
 class Solution {
     public int[] solution(int[] num_list, int n) {
         int len = num_list.length / n;
-        if(num_list.length % n != 0){
-            len += 1;
-        }
-        int[] answer = new int[len];
+        int[] answer = new int[(num_list.length % n == 0) ? len : len + 1];
         
         int index = 0;
         for(int i = 0; i < num_list.length; i += n){
