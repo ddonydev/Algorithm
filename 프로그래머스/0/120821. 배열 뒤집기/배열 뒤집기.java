@@ -1,11 +1,14 @@
+import java.util.*;
+import java.util.stream.Collectors;
 class Solution {
     public int[] solution(int[] num_list) {
-        int[] answer = new int[num_list.length];
-        
-        for(int i = num_list.length; i > 0; i--){
-            answer[num_list.length - i] = num_list[i-1];
+        List<Integer> list = Arrays.stream(num_list).boxed().collect(Collectors.toList());
+        Collections.reverse(list);
+
+        for (int i = 0; i < num_list.length; i++) {
+            num_list[i] = list.get(i);
         }
         
-        return answer;
+        return num_list;
     }
 }
