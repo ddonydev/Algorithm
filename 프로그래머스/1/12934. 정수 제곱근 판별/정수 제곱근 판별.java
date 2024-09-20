@@ -4,7 +4,6 @@ class Solution {
 
         long x = sqrt * sqrt;
 
-        long answer = 0;
         if(x == n){
             sqrt = sqrt + 1;
             return sqrt * sqrt;
