@@ -21,7 +21,6 @@ class Solution {
             return new int[]{-1};
         }
         
-        int[] answer = Arrays.copyOfRange(arr, start, end + 1);
-        return answer;
+        return Arrays.copyOfRange(arr, start, end + 1);
     }
 }
