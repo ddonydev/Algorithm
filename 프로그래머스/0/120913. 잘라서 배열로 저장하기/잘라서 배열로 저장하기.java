@@ -8,14 +8,14 @@ class Solution {
         }
         
         String[] answer = new String[len];
-        int index = 0;
 
-        String str = "";
-        for(int i = 0; i < my_str.length(); i++){
-            str += my_str.charAt(i);
-            if(i == my_str.length() - 1 || str.length() == n){
-                answer[index++] = str;
-                str = "";
+        int index = 0;
+        for(int i = 0; i < my_str.length(); i += n){
+            if(i + n > my_str.length()){
+                answer[index] = my_str.substring(i);
+            }else{
+            answer[index++] = my_str.substring(i, i + n);
+                
             }
         }
         
