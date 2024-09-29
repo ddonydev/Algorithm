@@ -3,18 +3,10 @@ class Solution {
         int x = dot[0];
         int y = dot[1];
         
-            if(x > 0){
-                if(y > 0){
-                    return 1;
-                }else{
-                    return 4;
-                }
-            }else{
-                if(y > 0){
-                    return 2;
-                }else{
-                    return 3;
-                }
-            }
+        if(x > 0){
+            return y > 0 ? 1 : 4;
+        }else{
+            return y > 0 ? 2 : 3;
+        }
     }
 }
