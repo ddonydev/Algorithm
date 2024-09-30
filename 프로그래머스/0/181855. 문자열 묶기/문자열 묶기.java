@@ -1,16 +1,14 @@
+import java.util.*;
 class Solution {
     public int solution(String[] strArr) {
-        int answer = 0;
-        for (int i = 1; i <= 30; i++) {
-            int cnt = 0;
-            for(int j = 0; j < strArr.length; j++){
-                if(strArr[j].length() == i){
-                    cnt++;
-                }
-            }
-            answer = Math.max(answer, cnt);
+        HashMap<Integer, Integer> map = new HashMap<>();
+        for (int i = 0; i < strArr.length; i++) {
+            map.put(strArr[i].length(), map.getOrDefault(strArr[i].length(), 0) + 1);
         }
-
+        int answer = 0;
+        for (Integer i : map.keySet()) {
+            answer = Math.max(answer, map.get(i));
+        }
         return answer;
     }
 }
