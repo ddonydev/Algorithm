@@ -11,11 +11,9 @@ class Solution {
             map.put(copy[i], count--);
         }
 
-        int[] answer = new int[emergency.length];
-
         for (int i = 0; i < emergency.length; i++) {
-            answer[i] = map.get(emergency[i]);
+            emergency[i] = map.get(emergency[i]);
         }
-        return answer;
+        return emergency;
     }
 }
