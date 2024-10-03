@@ -1,14 +1,8 @@
+import java.util.*;
 class Solution {
     public String solution(String s) {
-        String[] str = s.split(" ");
-
-        int max = -99999999;
-        int min = 99999999;
-        for (int i = 0; i < str.length; i++) {
-            max = Math.max(max, Integer.parseInt(str[i]));
-            min = Math.min(min, Integer.parseInt(str[i]));
-        }
-
-        return String.valueOf(min) + " " + String.valueOf(max);
+        int[] arr = Arrays.stream(s.split(" "))
+            .mapToInt(Integer::parseInt).sorted().toArray();
+        return arr[0] + " " + arr[arr.length - 1];
     }
 }
