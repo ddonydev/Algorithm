@@ -1,11 +1,10 @@
 class Solution {
     public String solution(String[] arr) {
-        String answer = "";
-        
-        for(String i : arr){
-            answer += i;
+        StringBuffer sb = new StringBuffer();
+        for (String s : arr) {
+            sb.append(s);
         }
         
-        return answer;
+        return sb.toString();
     }
 }
