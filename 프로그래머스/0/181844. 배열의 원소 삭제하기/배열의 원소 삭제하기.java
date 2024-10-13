@@ -1,5 +1,4 @@
-import java.util.List;
-import java.util.ArrayList;
+import java.util.*;
 class Solution {
     public int[] solution(int[] arr, int[] delete_list) {
         ArrayList<Integer> list = new ArrayList<>();
