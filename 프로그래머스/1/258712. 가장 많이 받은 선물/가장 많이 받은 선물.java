@@ -10,9 +10,9 @@ class Solution {
 
         for(String gift : gifts){
             String[] arr = gift.split(" ");
-            giftIndex.put(arr[0], giftIndex.get(arr[0])+1);
-            giftIndex.put(arr[1], giftIndex.get(arr[1])-1);
-            giftsMap.put(gift, giftsMap.getOrDefault(gift,0)+1);
+            giftIndex.put(arr[0], giftIndex.get(arr[0]) + 1);
+            giftIndex.put(arr[1], giftIndex.get(arr[1]) - 1);
+            giftsMap.put(gift, giftsMap.getOrDefault(gift, 0) + 1);
         }
 
         int[] giftForNextMonth = new int[friends.length];
