@@ -10,11 +10,6 @@ class Solution {
         for (int i = 0; i < arrNum.length; i++) {
             num += arrNum[i];
         }
-        if((x % num) == 0) {
-            return true;
-        }else{
-            return false;
-        }
-        
+        return x % num == 0 ? true : false;
     }
 }
