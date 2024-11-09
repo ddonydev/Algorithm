@@ -9,8 +9,7 @@ class Solution {
         char n = 97;
         
         for (int i = 0; i < str.length; i++) {
-            morse.put(str[i], String.valueOf(n));
-            n++;
+            morse.put(str[i], String.valueOf(n++));
         }
 
         String answer = "";
