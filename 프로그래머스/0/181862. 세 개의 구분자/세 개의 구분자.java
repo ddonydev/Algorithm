@@ -5,9 +5,7 @@ class Solution {
 
         ArrayList<String> list = new ArrayList<String>();
         for (int i = 0; i < str.length; i++) {
-            if(str[i] == null || str[i].equals("")){
-                continue;
-            }else{
+            if(str[i] != null && !str[i].equals("")){
                 list.add(str[i]);
             }
         }
