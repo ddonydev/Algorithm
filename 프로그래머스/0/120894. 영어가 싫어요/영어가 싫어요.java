@@ -8,17 +8,13 @@ class Solution {
             map.put(str[i], i + "");
         }
 
-        String[] numbersArr = numbers.split("");
-
         String tmp = "";
         String result = "";
-        for (int i = 0; i < numbersArr.length; i++) {
-            tmp += numbersArr[i];
-            for (int j = 0; j < str.length; j++) {
-                if (tmp.equals(str[j])) {
-                    result += map.get(tmp);
-                    tmp = "";
-                }
+        for (int i = 0; i < numbers.length(); i++) {
+            tmp += numbers.charAt(i);
+            if(map.containsKey(tmp)){
+                result += map.get(tmp);
+                tmp = "";
             }
         }
 
