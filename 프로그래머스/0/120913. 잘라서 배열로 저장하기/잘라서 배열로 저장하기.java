@@ -13,10 +13,10 @@ class Solution {
         for(int i = 0; i < my_str.length(); i += n){
             if(i + n > my_str.length()){
                 answer[index] = my_str.substring(i);
-            }else{
-            answer[index++] = my_str.substring(i, i + n);
-                
+                break;
             }
+            answer[index++] = my_str.substring(i, i + n);
+            
         }
         
         return answer;
