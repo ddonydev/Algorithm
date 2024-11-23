@@ -17,8 +17,6 @@ class Solution {
                 tmp = "";
             }
         }
-
-        long answer = Long.parseLong(result);
-        return answer;
+        return Long.parseLong(result);
     }
 }
