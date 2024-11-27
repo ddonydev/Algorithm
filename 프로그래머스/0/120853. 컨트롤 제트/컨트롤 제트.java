@@ -5,9 +5,9 @@ class Solution {
         for (int i = 0; i < arr.length; i++) {
             if(arr[i].equals("Z")) {
                 answer -= Integer.parseInt(arr[i - 1]);
-                continue;
+            }else{
+                answer += Integer.parseInt(arr[i]);
             }
-            answer += Integer.parseInt(arr[i]);
         }
         return answer;
     }
