@@ -1,8 +1,8 @@
 import java.util.*;
 class Solution {
     public int[] solution(String[] id_list, String[] report, int k) {
-        Map<String, Integer> id = new HashMap<>();
-        Map<String, Set<String>> map = new HashMap<>();
+        HashMap<String, Integer> id = new HashMap<>();
+        HashMap<String, Set<String>> map = new HashMap<>();
 
         for (int i = 0; i < id_list.length; i++) {
             id.put(id_list[i], i);
