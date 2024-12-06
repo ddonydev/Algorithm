@@ -5,11 +5,11 @@ class Solution {
                         "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", 
                         "..-", "...-", ".--", "-..-", "-.--", "--.."};
 
-        HashMap<String, String> morse = new HashMap<>();
+        HashMap<String, Character> morse = new HashMap<>();
         char n = 97;
         
         for (int i = 0; i < str.length; i++) {
-            morse.put(str[i], String.valueOf(n++));
+            morse.put(str[i], n++);
         }
 
         String answer = "";
