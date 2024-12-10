@@ -3,7 +3,7 @@ class Solution {
     public int[] solution(String s) {
         String[] str = s.split("\\{|,|\\}");
 
-        Map<Integer, Integer> map = new HashMap<>();
+        HashMap<Integer, Integer> map = new HashMap<>();
 
         for (int i = 0; i < str.length; i++) {
             if (str[i].matches("[0-9]+")) {
