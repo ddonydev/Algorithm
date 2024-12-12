@@ -18,8 +18,7 @@ class Solution {
         }
 
         if (zero == 0 && cnt == 0) {
-            answer[0] = 6;
-            answer[1] = 6;
+            return new int[]{6, 6};
         } else if (zero == 0 && cnt == 6) {
             answer[0] = 1;
             answer[1] = 1;
