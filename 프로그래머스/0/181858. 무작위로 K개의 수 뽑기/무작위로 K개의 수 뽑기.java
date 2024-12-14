@@ -10,17 +10,11 @@ class Solution {
         }
 
         if (list.size() < k) {
-            int num = k - list.size();
-            for (int i = 0; i < num; i++) {
+            int len = k - list.size();
+            for (int i = 0; i < len; i++) {
                 list.add(-1);
             }
         }
-
-        int[] answer = new int[list.size()];
-
-        for (int i = 0; i < list.size(); i++) {
-            answer[i] = list.get(i);
-        }
-        return answer;
+        return list.stream().mapToInt(Integer::intValue).toArray();
     }
 }
