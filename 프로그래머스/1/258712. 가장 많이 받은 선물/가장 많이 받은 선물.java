@@ -17,9 +17,9 @@ class Solution {
 
         int[] giftForNextMonth = new int[friends.length];
         for(int i = 0; i < friends.length; i++){
-            for(int j = i+1; j < friends.length; j++){
-                String A = friends[i] + " " + friends[j];
-                String B = friends[j] + " " + friends[i];
+            for(int j = i + 1; j < friends.length; j++){
+                String A = String.join(" ", friends[i], friends[j]);
+                String B = String.join(" ", friends[j], friends[i]);
                 int cntA = giftsMap.containsKey(A) ? giftsMap.get(A) : 0;
                 int cntB = giftsMap.containsKey(B) ? giftsMap.get(B) : 0;
 
