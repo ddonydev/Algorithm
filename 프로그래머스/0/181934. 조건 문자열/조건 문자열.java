@@ -1,39 +1,12 @@
+import java.util.*;
 class Solution {
     public int solution(String ineq, String eq, int n, int m) {
-        if(eq.equals("=")){
-            if(ineq.equals(">")){
-                if(n >= m){
-                    return 1;
-                }else{
-                    return 0;
-                }
-            }else{
-                if(n <= m){
-                    return 1;
-                }else{
-                    return 0;
-                }
-            }
-            
-        }
+        HashMap<String, Boolean> map = new HashMap<>();
+        map.put(">=", n >= m);
+        map.put("<=", n <= m);
+        map.put(">!", n > m);
+        map.put("<!", n < m);
         
-        if(eq.equals("!")){
-            if(ineq.equals(">")){
-                if(n > m){
-                    return 1;
-                }else{
-                    return 0;
-                }
-            }else{
-                if(n < m){
-                    return 1;
-                }else{
-                    return 0;
-                }
-            }
-            
-        }
-     
-        return 0;
+        return map.get(ineq + eq) ? 1 : 0;
     }
 }
