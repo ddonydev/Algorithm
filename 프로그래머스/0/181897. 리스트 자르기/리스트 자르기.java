@@ -12,13 +12,7 @@ class Solution {
             for (int i = slicer[0]; i <= slicer[1]; i+=slicer[2]) {
                 list.add(num_list[i]);
             }
-            
-            int[] answer = new int[list.size()];
-
-            for (int i = 0; i < list.size(); i++) {
-                answer[i] = list.get(i);
-            }
-            return answer;
+            return list.stream().mapToInt(Integer::intValue).toArray();
         }
         
     }
