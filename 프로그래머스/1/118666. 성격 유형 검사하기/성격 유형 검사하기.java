@@ -1,7 +1,7 @@
 import java.util.*;
 class Solution {
     public String solution(String[] survey, int[] choices) {
-        Map<String, Integer> type = new HashMap<>();
+        HashMap<String, Integer> type = new HashMap<>();
         type.put("RT", 0);
         type.put("CF", 0);
         type.put("JM", 0);
