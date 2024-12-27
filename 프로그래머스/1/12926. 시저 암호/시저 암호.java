@@ -1,6 +1,6 @@
 class Solution {
     public String solution(String s, int n) {
-        String answer = "";
+        StringBuilder sb = new StringBuilder();
         for (int i = 0; i < s.length(); i++) {
             int str = s.charAt(i);
             int sum = str + n;
@@ -13,14 +13,14 @@ class Solution {
             }
 
             if (str == 32) {
-                answer += " ";
+                sb.append(" ");
                 continue;
             }
 
-            answer += (char) sum;
+            sb.append((char) sum);
 
         }   
         
-        return answer;
+        return sb.toString();
     }
 }
