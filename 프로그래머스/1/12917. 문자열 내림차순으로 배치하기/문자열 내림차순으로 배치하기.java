@@ -4,8 +4,6 @@ class Solution {
         StringBuffer sb = new StringBuffer();
         char[] c = s.toCharArray();
         Arrays.sort(c);
-        sb.append(c);
-        sb.reverse();
-        return sb.toString();
+        return sb.append(c).reverse().toString();
     }
 }
