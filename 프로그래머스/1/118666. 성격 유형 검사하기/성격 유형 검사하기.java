@@ -20,9 +20,7 @@ class Solution {
 
         for (String key : type.keySet()) {
             String[] str = key.split("");
-            if (type.get(key) < 0) {
-                answer += str[0];
-            } else if (type.get(key) > 0) {
+            if (type.get(key) > 0) {
                 answer += str[1];
             }else{
                 answer += str[0];
