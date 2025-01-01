@@ -17,14 +17,13 @@ class Solution {
         for (int i = 0; i < goal.length; i++) {
             if (goal[i].equals(queue1.peek())) {
                 queue1.remove();
-                cnt += 1;
             }else if(goal[i].equals(queue2.peek())){
                 queue2.remove();
-                cnt += 1;
             }else{
                 answer = "No";
                 break;
             }
+            cnt += 1;
         }
 
         if (cnt == goal.length) {
